@@ -1,5 +1,7 @@
 # JA! — 50 videnskabeligt beviste veje til at overbevise
 
+**Publiceret:** https://nikolai-cnm.github.io/cialdini-ja/
+
 Alle kapitler fra Noah J. Goldstein, Steve J. Martin og Robert B. Cialdinis
 *Yes! 50 Scientifically Proven Ways to Be Persuasive* (Free Press, 2008),
 skåret op i de forsøg, de faktisk bygger på.

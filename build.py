@@ -19,6 +19,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 SRC = HERE / "kapitler.md"
 OUT = HERE / "index.html"
+ART = HERE / "artifact.html"
 
 STONES = ["Historie", "Statistik", "Konklusion", "Taktik"]
 
@@ -631,7 +632,16 @@ def main():
        render(preamble), "\n".join(body), JS)
 
     OUT.write_text(page, encoding="utf-8")
-    print("index.html bygget: %d kapitler, %d blokke, %d KB"
+
+    # Samme side uden html/head/body-wrapper — formatet Claude Artifacts kræver.
+    ART.write_text(
+        "<title>%s</title>\n%s\n%s\n" % (
+            re.search(r"<title>(.*?)</title>", page, re.S).group(1),
+            re.search(r"<style>.*?</style>", page, re.S).group(0),
+            re.search(r"<body>(.*)</body>", page, re.S).group(1).strip()),
+        encoding="utf-8")
+
+    print("index.html + artifact.html bygget: %d kapitler, %d blokke, %d KB"
           % (len(chapters), blocks, len(page) // 1024))
 
 
