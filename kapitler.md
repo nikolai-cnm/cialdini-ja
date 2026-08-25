@@ -32,6 +32,191 @@ Hvert kapitel er mærket med det **princip**, det hviler på — Cialdinis seks 
 
 ---
 
+# META Meta ads — de 15, du kan lægge direkte ned over en annonce
+
+Femten af de halvtreds kapitler oversætter sig næsten uden modstand til en Meta-annonce eller en reklamefilm. Her er ét fra hver af de fjorten dele, plus den dyreste fejl i bunken.
+
+Kapitlerne står stadig, hvor de hører til. Det her er en genvej, ikke en flytning — hvert kort linker til det fulde kapitel med hele forsøget bag.
+
+**Tal i sorte kort er bogens.** Annonceteksterne er derimod mine egne eksempler, skrevet ud fra princippet. De står i markerede felter og er ikke citater fra bogen.
+
+### AD 1 · Sig, hvad flertallet allerede gør — i første linje
+
+@stat +26 % :: flere deltog, da beskeden fortalte, hvad flertallet af de andre gjorde
+
+Den mest oversete linje i en annonce er den, der beskriver, hvor mange der allerede er med. De fleste annoncer bruger i stedet førstelinjen på den ædle begrundelse. Bogens hotelforsøg viser, at beskrivelsen af flokken slår begrundelsen — og at næsten ingen tror på det om sig selv.
+
+@ads Svag åbning :: Hjælp os med at skåne miljøet. Vær med i vores program.
+@ads Stærk åbning :: De fleste i dit område er allerede med. Slut dig til dem.
+
+Vær opmærksom på tonen. Social proof leveret som en anklage — "hvorfor er du ikke med endnu?" — virker ikke. Leveret som en invitation gør den.
+
+### AD 3 · Fjern enhver linje, der begynder med "alt for få"
+
+@stat 7,92 % :: blev stjålet med skiltet, der beskrev, hvor mange der stjal
+@stat 2,92 % :: blev stjålet helt uden skilt
+
+Det her er den dyreste fejl i annoncebranchen, og den ser ud som god markedsføring. Beklager du, hvor få der gør det rigtige — "kun 12 % har styr på deres pension", "alt for mange dropper deres træning" — dokumenterer du samtidig, at det er normalt at lade være. Skiltet i Petrified Forest gjorde tyveriet næsten tre gange værre end slet intet skilt.
+
+@ads Slår tilbage :: Alt for få danskere får tjekket deres forsikringer. Gør noget nu.
+@ads Virker :: Otte ud af ti har allerede fået deres forsikringer tjekket. Mangler du?
+
+Samme virkelighed, to indramninger. Vælg den, hvor det ønskede er det normale.
+
+### AD 6 · Sæt kroner på det, du forærer væk
+
+@stat −35 % :: lavere pris var folk villige til at betale for den samme vare, når den blev vist som en gratis tillægsgave
+
+Alle lead magnets på Meta har det samme problem: ordet "gratis" sætter numerisk værdien til nul. Raghubirs forsøg viser, at gaven ikke bare mangler en pris — den bliver aktivt **mindre** værd i modtagerens øjne, fordi folk slutter, at ingen forærer noget værdifuldt væk.
+
+@ads Svag :: Download vores gratis guide.
+@ads Stærk :: Få guiden til 1.200 kr. uden beregning.
+
+Det gælder også webinarer, prøvetimer, tjek og analyser. Skriv, hvad det ville have kostet.
+
+### AD 12 · Giv først — uden betingelser
+
+@stat +45 % :: flere deltog, da giveren havde givet **først**, i forhold til at give på betingelse af deltagelse
+
+Det her er hele forskellen mellem en lead magnet, der virker, og en, der ikke gør. Hotelkortet, der lovede en donation *hvis* gæsten deltog, gav **nul** forbedring. Kortet, der oplyste, at hotellet allerede **havde** doneret på gæstens vegne, gav 45 procent.
+
+@ads Byttehandel :: Tilmeld dig nyhedsbrevet, og få adgang til vores værktøj.
+@ads Gengældelse :: Vi har lagt værktøjet frit frem. Brug det — og sig til, hvis du vil have mere.
+
+Alt med "hvis du... så får du..." er en økonomisk transaktion. Transaktioner skaber ingen forpligtelse, kun en pris.
+
+### AD 14 · Byg kampagnen som to skridt, ikke ét
+
+@stat 17 % :: sagde ja til den store anmodning, når de blev spurgt direkte
+@stat 76 % :: sagde ja, når de to uger forinden havde sagt ja til noget lille
+
+Det her er ikke en tekstregel, det er en kampagnestruktur. Det store spring i Freedman og Frasers forsøg kom ikke af et bedre argument, men af et lille ja to uger tidligere. På Meta hedder det en koldt-trafik-annonce, der beder om noget nærmest gratis, og en retargeting-annonce til dem, der sagde ja.
+
+@ads Skridt 1 :: Tag testen på to minutter og se, hvor du står.
+@ads Skridt 2 :: Du tog testen. Her er de tre ting, dine svar peger på — book en gennemgang.
+
+Betingelsen fra forsøget er vigtig: det første ja skal føles **frivilligt**. Er første skridt stort nok til, at folk siger nej, har du ingen fod i døren — du har en lukket dør.
+
+### AD 20 · Legitimér det mindste skridt udtrykkeligt
+
+@stat 50 % :: donerede, når anmodningen tilføjede at selv et minimalt bidrag hjalp
+@stat 28,6 % :: donerede uden den tilføjelse
+@stat Ingen forskel :: i det gennemsnitlige beløb pr. bidragyder mellem de to versioner
+
+Folk siger ikke nej, fordi de er ligeglade. De siger nej, fordi de tror, deres bidrag er for lille til at tælle. Fire ord fjernede undskyldningen og fordoblede antallet af givere — **uden** at beløbene faldt.
+
+@ads Uden :: Book en tid, og lad os se på din markedsføring.
+@ads Med :: Book en tid. Selv et kort opkald på ti minutter kan give dig noget at gå videre med.
+
+Overfør det til din CTA. Det, der stopper folk, er sjældent tilbuddet — det er forestillingen om, hvor meget der kræves af dem.
+
+### AD 22 · Lad en anden sige det om dig
+
+@stat Højere vurdering :: fik forfatteren på næsten alle dimensioner — særligt sympati — når agenten roste ham frem for ham selv
+
+Det er den forskningsmæssige begrundelse for, at UGC og kundevideoer slår brand-stemmen. Pfeffer-studiet viser mere end det: deltagerne vidste udmærket, at agenten fik **betaling** for at rose — og fratrak alligevel ikke det, de burde. Effekten var størst på netop den dimension, selvpromovering ødelægger: sympati.
+
+@ads Brand-stemme :: Vi er markedets mest erfarne rådgivere.
+@ads Tredjepart :: "Jeg havde snakket med fire firmaer. De her var de eneste, der stillede spørgsmål, før de gav et bud." — kunde, Aarhus
+
+Gælder også de tørre kvalifikationer: lad speaken eller teksten sige "femten års erfaring", ikke personen i billedet.
+
+### AD 26 · Nævn svagheden — før nogen anden gør det
+
+@stat 65 % :: af kendelserne faldt til fordel for den part, hvis eget vidne selv fremlagde svagheden
+@stat 43 % :: når modparten var den, der bragte den op først
+
+At argumentere imod din egen interesse skaber en opfattelse af, at du er ærlig — og **det** er, hvad der gør dine styrker troværdige bagefter. Folkevognskampagnen solgte en bil ved at kalde den grim. Progressive viser konkurrenternes lavere priser på sin egen forside.
+
+@ads Uden :: Danmarks bedste projektværktøj — hurtigt, billigt og nemt.
+@ads Med :: Vi er ikke det billigste værktøj på markedet. Vi er det, folk stadig bruger efter seks måneder.
+
+To betingelser: svagheden skal være reelt lille, og den styrke, du følger op med, skal **hænge sammen med** svagheden. Svarer du på pris, skal du svare med omkostning — ikke med hastighed.
+
+### AD 31 · Brug kundens egne ord, ikke dine synonymer
+
+@stat +70 % :: næsten så meget steg drikkepengene, da tjeneren gentog bestillingen ordret i stedet for at sige "okay"
+
+Det billigste hook, der findes, er en sætning, din kunde selv har sagt. Van Baarens tjenere ændrede ingenting ved servicen — de gentog kundens formulering ord for ord. Bogens kundeservice-eksempel viser bagsiden: medarbejderen sagde "ked af det" og "oprevet" til en kunde, der sagde "vred", og samtalen kørte af sporet på synonymerne alene.
+
+@ads Din formulering :: Optimer din tidsanvendelse med automatiserede arbejdsgange.
+@ads Deres formulering :: "Jeg bruger hver fredag på at samle tal, ingen kigger på."
+
+Hent linjerne fra kommentarspor, salgsopkald og anmeldelser. Ikke fra din egen brandbog.
+
+### AD 34 · Skriv tilbuddet som et tab
+
+@stat 30 % :: mere ville triste købere betale for samme vare
+@stat 33 % :: mindre ville triste sælgere tage for den
+
+Tabsaversion er et af de bedst underbyggede fund i samfundsvidenskaben: folk er stærkere motiverede af at undgå tab end af at opnå gevinster. Bogen giver rewriten helt konkret.
+
+@ads Gevinst :: Benyt lejligheden til at prøve den nye serie med 20 % rabat.
+@ads Tab :: Gå ikke glip af muligheden for at prøve den nye serie med 20 % rabat.
+
+Samme tilbud, samme rabat, samme deadline. Kun retningen er vendt. Og bemærk, at det kræver, at knapheden er ægte — ellers er det bare en løgn med god formulering.
+
+### AD 35 · Sæt altid et "fordi" ind
+
+@stat 60 % :: sagde ja uden nogen begrundelse
+@stat 94 % :: sagde ja med en ægte begrundelse
+@stat 93 % :: sagde ja med en fuldstændig indholdsløs begrundelse
+
+Langers kopimaskineforsøg er den billigste tekstredigering i bogen: ét ord. Men læg mærke til grænsen, som er lige så vigtig. Ved den **store** anmodning gav den tomme begrundelse **ingen** stigning overhovedet — kun den ægte fordoblede tilslutningen.
+
+@ads Uden :: Book en gennemgang af din konto.
+@ads Med :: Book en gennemgang af din konto, fordi de fleste betaler for tre ting, de ikke bruger.
+
+Er dit tilbud gratis og uforpligtende, kan næsten enhver begrundelse bære. Koster det kunden noget, skal grunden holde.
+
+### AD 39 · Vis det dyre først
+
+@stat +500 % :: steg salget af boblebadet, da det blev sammenlignet med prisen på en tilbygning
+@stat 15.000 $ :: prisen på boblebadet — mod et byggeri til mindst det dobbelte
+
+Perceptuel kontrast er det eneste værktøj i bogen, der ændrer, hvad din pris **føles** som, uden at du rører prisen. Byggemarkedet ændrede hverken produkt, pris eller garanti. De fandt bare en sammenligning, kunden allerede kendte prisen på.
+
+@ads Uden ramme :: Forløbet koster 24.000 kr.
+@ads Med ramme :: En medarbejder til opgaven koster dig 38.000 kr. om måneden. Forløbet koster 24.000 kr. i alt.
+
+I en reklamefilm er det de første fem sekunder: vis omkostningen ved problemet, før du viser prisen på løsningen.
+
+### AD 42 · Lad annoncen og landingssiden ligne hinanden
+
+@stat 40 % :: af de seere, der kårede reklamen til årets bedste, var sikre på, at den var for **konkurrenten**
+
+Energizers kanin var elsket, husket og prisbelønnet — og fyrre procent troede, den var Duracells. Efter kampagnen voksede **Duracells** markedsandel. Det er den dyreste form for spildt annoncekroner, der findes, og den ser ud som succes i alle rapporter undtagen salgstallet.
+
+@ads Reglen :: Det billede, den sætning og den figur, der bar annoncen, skal møde brugeren igen øverst på landingssiden — uændret.
+
+Test ikke bare, om folk kan huske annoncen. Test, om de kan huske **hvem den var fra**. De to tal er ikke det samme.
+
+### AD 45 · Skriv til en, der er træt og distraheret
+
+@stat 2 trin :: accept af et udsagn sker automatisk; afvisning kræver en efterfølgende mental anstrengelse
+
+Gilberts fund er, at vi accepterer ethvert udsagn som sandt i det øjeblik, vi hører det, og først en brøkdel af et sekund senere afviser det — hvis vi har overskuddet. Meta bliver konsumeret præcis i den tilstand: træt, distraheret, med tommelfingeren i bevægelse.
+
+Det er ikke en invitation til at slippe af sted med tynde påstande. Det er en instruktion om **form**: din annonce får aldrig den anden bearbejdning, som et velbegrundet argument har brug for.
+
+@ads Reglen :: Én påstand pr. annonce. Konkret. Uden forbehold i samme sætning.
+
+Det er også grunden til, at kapitel 37's råd betyder mere på Meta end noget andet sted: kort, letlæseligt, ingen jargon.
+
+### AD 48 · Kør ikke samme kreativ i alle markeder
+
+@stat Sydkorea :: den kollektivistiske version overbeviste mest
+@stat USA :: den individualistiske version overbeviste mest
+
+Han og Shavitts tyggegummiannonce er den reneste demonstration: samme produkt, samme fordel, to formuleringer. "Forkæl dig selv med en oplevelse af frisk ånde" mod "Del oplevelsen af frisk ånde". Vinderen skifter med markedet.
+
+@ads Individualistisk marked :: Få styr på din egen økonomi.
+@ads Kollektivistisk marked :: Giv din familie tryghed om økonomien.
+
+Det er ikke et oversættelsesspørgsmål. Effekten var stærkest på produkter, folk deler med andre — så jo mere dit produkt bruges sammen med nogen, jo dyrere er det at køre én kreativ overalt.
+
+---
+
 # DEL 1 — Social proof: flokkens bevis
 
 ---

@@ -10,6 +10,16 @@ Markdown-dialekt:
   ### Blok n · Titel       ->  ét forsøg / ét selvstændigt fund
   #### Historie|Statistik|Konklusion|Taktik  ->  de fire trin, foldbare
   @stat værdi :: forklaring                  ->  talkort (samles i et gitter)
+  @citat Label :: dansk :: engelsk original  ->  ordret citat fra bogen
+  @note tekst                                ->  redaktionel note
+  @ads Label :: tekst                        ->  vores eget annonceeksempel
+
+  # META titel                               ->  kurateret genvej foran DEL 1
+  ### AD <kapitelnr> · titel                 ->  ét kort i den sektion; titel og
+                                                 princip hentes fra kapitlet selv
+
+@citat og @ads ser bevidst forskellige ud. Det foerste er bogens ord, det andet
+er vores egne — de to maa aldrig kunne forveksles paa siden.
 """
 
 import html
@@ -89,6 +99,19 @@ def render(lines, heading_base=1):
                 i += 1
             out.append('<div class="quotes q%d">%s</div>'
                        % (min(len(cards), 2), "".join(cards)))
+            continue
+
+        # Annonceeksempel — vores egen tekst, ikke bogens. Markeres tydeligt
+        # anderledes end @citat, så de to aldrig kan forveksles.
+        if s.startswith("@ads "):
+            cards = []
+            while i < n and lines[i].strip().startswith("@ads "):
+                label, _, body = lines[i].strip()[len("@ads "):].partition("::")
+                cards.append(
+                    '<div class="adline"><span class="adline-l">%s</span>'
+                    '<p>%s</p></div>' % (inline(label.strip()), inline(body.strip())))
+                i += 1
+            out.append('<div class="adlines">%s</div>' % "".join(cards))
             continue
 
         # Redaktionel note — fx om bogen kun parafraserer en ordlyd
@@ -188,12 +211,28 @@ def render(lines, heading_base=1):
 def parse(md):
     """Deler dokumentet op i indledning, dele og kapitler."""
     preamble, parts = [], []
+    meta = None
     chapter = block = stone = None
     part = None
     target = preamble
 
     for raw in md.split("\n"):
         s = raw.strip()
+
+        m = re.match(r"^#\s+META\s+(.*)$", s)
+        if m:
+            meta = {"title": m.group(1).strip(), "intro": [], "picks": []}
+            chapter = block = stone = None
+            target = meta["intro"]
+            continue
+
+        if meta is not None and chapter is None:
+            m = re.match(r"^###\s+AD\s+(\d+)\s*[·\-—.:]\s*(.*)$", s)
+            if m:
+                pick = {"num": m.group(1), "title": m.group(2).strip(), "lines": []}
+                meta["picks"].append(pick)
+                target = pick["lines"]
+                continue
 
         m = re.match(r"^#\s+DEL\s+(.*)$", s)
         if m:
@@ -248,7 +287,7 @@ def parse(md):
         if target is not None:
             target.append(raw)
 
-    return preamble, parts
+    return preamble, parts, meta
 
 
 # ---------------------------------------------------------------- render side
@@ -296,6 +335,32 @@ def render_chapter(ch):
 
     parts.append("</section>")
     return "\n".join(parts)
+
+
+def render_meta(meta, chapters):
+    """Kurateret genvej. Henter titel og princip fra selve kapitlet, saa de to
+    aldrig kan komme ud af trit."""
+    by_num = {c["num"]: c for c in chapters}
+    out = ['<section id="meta-ads" class="metasec">']
+    out.append('<h2 class="delhead">%s</h2>' % inline(meta["title"]))
+    out.append('<div class="metaintro">%s</div>' % render(meta["intro"], 4))
+    for idx, pick in enumerate(meta["picks"], 1):
+        ch = by_num.get(pick["num"])
+        ref = ""
+        if ch:
+            ref = ('<a class="adref" href="#%s"><b>Kapitel %s</b>'
+                   '<span>%s</span><span class="adchip">%s</span></a>'
+                   % (ch["slug"], ch["num"], html.escape(ch["title"]),
+                      html.escape(ch["princip"])))
+        out.append(
+            '<article class="adcard">'
+            '<header class="adhead"><span class="adidx">%d / %d</span>'
+            '<h3>%s</h3>%s</header>'
+            '<div class="adbody">%s</div></article>'
+            % (idx, len(meta["picks"]), inline(pick["title"]), ref,
+               render(pick["lines"], 5)))
+    out.append("</section>")
+    return "\n".join(out)
 
 
 def render_nav(parts):
@@ -504,6 +569,64 @@ p.note{
   border-left:2px solid var(--line);padding-left:13px;margin:0 0 15px
 }
 
+/* ---- annonceeksempler: vores egen tekst, ikke bogens ---- */
+.adlines{display:grid;gap:9px;margin:0 0 17px}
+.adline{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:baseline;
+  padding:11px 15px 12px;border-radius:10px;
+  background:var(--panel2);border:1px dashed var(--line)
+}
+.adline-l{
+  font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);white-space:nowrap
+}
+.adline p{margin:0;font-size:15.5px;line-height:1.5}
+@media (max-width:620px){
+  .adline{grid-template-columns:1fr;gap:5px}
+  .adline-l{white-space:normal}
+}
+
+/* ---- kurateret Meta-sektion ---- */
+.metasec{scroll-margin-top:16px}
+.metasec>.delhead{margin-top:0}
+.metaintro{
+  background:var(--panel);border:1px solid var(--line);border-radius:15px;
+  padding:22px 26px 8px;margin:14px 0 0;box-shadow:var(--shadow)
+}
+.metaintro p:last-child{margin-bottom:14px}
+.adcard{
+  background:var(--panel);border:1px solid var(--line);border-radius:15px;
+  padding:24px 28px 22px;margin:14px 0;box-shadow:var(--shadow)
+}
+.adhead{margin:0 0 14px}
+.adidx{
+  display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:5px;
+  font-variant-numeric:tabular-nums
+}
+.adhead h3{font-size:22px;line-height:1.28;letter-spacing:-.015em;margin:0 0 9px}
+a.adref{
+  display:flex;flex-wrap:wrap;gap:5px 10px;align-items:baseline;
+  text-decoration:none;color:var(--muted);font-size:13.5px;
+  padding:7px 12px;border-radius:9px;background:var(--panel2);
+  border:1px solid var(--line2)
+}
+a.adref b{color:var(--accent);font-weight:650}
+a.adref:hover{border-color:var(--accent)}
+a.adref:hover span:not(.adchip){color:var(--ink)}
+.adchip{
+  font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px
+}
+.adbody>*:last-child{margin-bottom:0}
+#metalink{
+  display:block;margin-top:9px;padding:9px 12px;border-radius:9px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-size:13px;font-weight:650;line-height:1.35
+}
+#metalink:hover{opacity:.88}
+.metasec.hide{display:none}
+
 p{margin:0 0 15px}
 ul,ol{margin:0 0 15px;padding-left:23px}
 li{margin:0 0 10px}
@@ -546,6 +669,7 @@ var q=document.getElementById('q'),
     dels=[].slice.call(document.querySelectorAll('.delhead')),
     navdels=[].slice.call(document.querySelectorAll('.navdel')),
     intro=document.getElementById('intro'),
+    metasec=document.getElementById('meta-ads'),
     empty=document.getElementById('empty'),
     navFor={},activeP='';
 [].slice.call(document.querySelectorAll('#side li[data-for]')).forEach(function(li){
@@ -563,6 +687,7 @@ function apply(){
   });
   var filtering=!!v||!!activeP;
   intro.classList.toggle('hide',filtering);
+  if(metasec)metasec.classList.toggle('hide',filtering);
   dels.forEach(function(h){
     var any=false,el=h.nextElementSibling;
     while(el&&!el.classList.contains('delhead')){
@@ -631,7 +756,7 @@ t.addEventListener('click',function(){
 
 
 def main():
-    preamble, parts = parse(SRC.read_text(encoding="utf-8"))
+    preamble, parts, meta = parse(SRC.read_text(encoding="utf-8"))
 
     chapters = [c for p in parts for c in p["chapters"]]
     blocks = sum(len(c["blocks"]) for c in chapters)
@@ -641,6 +766,8 @@ def main():
             principper.append(c["princip"])
 
     body = []
+    if meta:
+        body.append(render_meta(meta, chapters))
     for p in parts:
         if p["title"]:
             body.append('<h2 class="delhead" id="%s">DEL %s</h2>'
@@ -668,6 +795,7 @@ def main():
   <input id="q" type="search" placeholder="Søg i kapitlerne…" aria-label="Søg">
   <div id="filters">%s</div>
   <button id="foldall" type="button"></button>
+  %s
   <nav>%s</nav>
 </aside>
 <main>
@@ -681,7 +809,10 @@ def main():
 <button id="toggle" title="Skift tema" aria-label="Skift lyst/mørkt tema">&#9790;</button>
 <script>%s</script>
 </body></html>
-""" % (CSS, len(chapters), blocks, filters, render_nav(parts),
+""" % (CSS, len(chapters), blocks, filters,
+       ('<a id="metalink" href="#meta-ads">%s</a>' % html.escape(meta["title"])
+        if meta else ""),
+       render_nav(parts),
        render(preamble), "\n".join(body), JS)
 
     OUT.write_text(page, encoding="utf-8")

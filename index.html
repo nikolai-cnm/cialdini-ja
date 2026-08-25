@@ -196,6 +196,64 @@ p.note{
   border-left:2px solid var(--line);padding-left:13px;margin:0 0 15px
 }
 
+/* ---- annonceeksempler: vores egen tekst, ikke bogens ---- */
+.adlines{display:grid;gap:9px;margin:0 0 17px}
+.adline{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:baseline;
+  padding:11px 15px 12px;border-radius:10px;
+  background:var(--panel2);border:1px dashed var(--line)
+}
+.adline-l{
+  font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);white-space:nowrap
+}
+.adline p{margin:0;font-size:15.5px;line-height:1.5}
+@media (max-width:620px){
+  .adline{grid-template-columns:1fr;gap:5px}
+  .adline-l{white-space:normal}
+}
+
+/* ---- kurateret Meta-sektion ---- */
+.metasec{scroll-margin-top:16px}
+.metasec>.delhead{margin-top:0}
+.metaintro{
+  background:var(--panel);border:1px solid var(--line);border-radius:15px;
+  padding:22px 26px 8px;margin:14px 0 0;box-shadow:var(--shadow)
+}
+.metaintro p:last-child{margin-bottom:14px}
+.adcard{
+  background:var(--panel);border:1px solid var(--line);border-radius:15px;
+  padding:24px 28px 22px;margin:14px 0;box-shadow:var(--shadow)
+}
+.adhead{margin:0 0 14px}
+.adidx{
+  display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:5px;
+  font-variant-numeric:tabular-nums
+}
+.adhead h3{font-size:22px;line-height:1.28;letter-spacing:-.015em;margin:0 0 9px}
+a.adref{
+  display:flex;flex-wrap:wrap;gap:5px 10px;align-items:baseline;
+  text-decoration:none;color:var(--muted);font-size:13.5px;
+  padding:7px 12px;border-radius:9px;background:var(--panel2);
+  border:1px solid var(--line2)
+}
+a.adref b{color:var(--accent);font-weight:650}
+a.adref:hover{border-color:var(--accent)}
+a.adref:hover span:not(.adchip){color:var(--ink)}
+.adchip{
+  font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px
+}
+.adbody>*:last-child{margin-bottom:0}
+#metalink{
+  display:block;margin-top:9px;padding:9px 12px;border-radius:9px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-size:13px;font-weight:650;line-height:1.35
+}
+#metalink:hover{opacity:.88}
+.metasec.hide{display:none}
+
 p{margin:0 0 15px}
 ul,ol{margin:0 0 15px;padding-left:23px}
 li{margin:0 0 10px}
@@ -239,6 +297,7 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
   <input id="q" type="search" placeholder="Søg i kapitlerne…" aria-label="Søg">
   <div id="filters"><button type="button" data-p="Social proof">Social proof</button><button type="button" data-p="Valg og pris">Valg og pris</button><button type="button" data-p="Budskabets form">Budskabets form</button><button type="button" data-p="Gengældelse">Gengældelse</button><button type="button" data-p="Konsistens">Konsistens</button><button type="button" data-p="Anmodningens størrelse">Anmodningens størrelse</button><button type="button" data-p="Autoritet">Autoritet</button><button type="button" data-p="Troværdighed">Troværdighed</button><button type="button" data-p="Sympati">Sympati</button><button type="button" data-p="Knaphed">Knaphed</button><button type="button" data-p="Tilstand og følelser">Tilstand og følelser</button><button type="button" data-p="Kultur og kanal">Kultur og kanal</button></div>
   <button id="foldall" type="button"></button>
+  <a id="metalink" href="#meta-ads">Meta ads — de 15, du kan lægge direkte ned over en annonce</a>
   <nav><p class="navdel">1 — Social proof: flokkens bevis</p>
 <ul>
 <li data-for="kap-1"><a href="#kap-1"><b>1</b><span>Hvordan kan det gøre dig mere overbevisende at besvære dit publikum?</span></a></li>
@@ -350,6 +409,73 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
 <p>Hvert kapitel er mærket med det <strong>princip</strong>, det hviler på — Cialdinis seks universelle principper (social proof, gengældelse, autoritet, konsistens, knaphed, sympati) plus de mekanismer, der falder uden for dem.</p>
 <p><strong>Status:</strong> Alle 50 kapitler er færdige.</p>
 </div>
+<section id="meta-ads" class="metasec">
+<h2 class="delhead">Meta ads — de 15, du kan lægge direkte ned over en annonce</h2>
+<div class="metaintro"><p>Femten af de halvtreds kapitler oversætter sig næsten uden modstand til en Meta-annonce eller en reklamefilm. Her er ét fra hver af de fjorten dele, plus den dyreste fejl i bunken.</p>
+<p>Kapitlerne står stadig, hvor de hører til. Det her er en genvej, ikke en flytning — hvert kort linker til det fulde kapitel med hele forsøget bag.</p>
+<p><strong>Tal i sorte kort er bogens.</strong> Annonceteksterne er derimod mine egne eksempler, skrevet ud fra princippet. De står i markerede felter og er ikke citater fra bogen.</p></div>
+<article class="adcard"><header class="adhead"><span class="adidx">1 / 15</span><h3>Sig, hvad flertallet allerede gør — i første linje</h3><a class="adref" href="#kap-1"><b>Kapitel 1</b><span>Hvordan kan det gøre dig mere overbevisende at besvære dit publikum?</span><span class="adchip">Social proof</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">+26 %</div><div class="stat-l">flere deltog, da beskeden fortalte, hvad flertallet af de andre gjorde</div></div></div>
+<p>Den mest oversete linje i en annonce er den, der beskriver, hvor mange der allerede er med. De fleste annoncer bruger i stedet førstelinjen på den ædle begrundelse. Bogens hotelforsøg viser, at beskrivelsen af flokken slår begrundelsen — og at næsten ingen tror på det om sig selv.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Svag åbning</span><p>Hjælp os med at skåne miljøet. Vær med i vores program.</p></div><div class="adline"><span class="adline-l">Stærk åbning</span><p>De fleste i dit område er allerede med. Slut dig til dem.</p></div></div>
+<p>Vær opmærksom på tonen. Social proof leveret som en anklage — "hvorfor er du ikke med endnu?" — virker ikke. Leveret som en invitation gør den.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">2 / 15</span><h3>Fjern enhver linje, der begynder med "alt for få"</h3><a class="adref" href="#kap-3"><b>Kapitel 3</b><span>Hvilken almindelig fejl får budskaber til at selvdestruere?</span><span class="adchip">Social proof</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">7,92 %</div><div class="stat-l">blev stjålet med skiltet, der beskrev, hvor mange der stjal</div></div><div class="stat"><div class="stat-v">2,92 %</div><div class="stat-l">blev stjålet helt uden skilt</div></div></div>
+<p>Det her er den dyreste fejl i annoncebranchen, og den ser ud som god markedsføring. Beklager du, hvor få der gør det rigtige — "kun 12 % har styr på deres pension", "alt for mange dropper deres træning" — dokumenterer du samtidig, at det er normalt at lade være. Skiltet i Petrified Forest gjorde tyveriet næsten tre gange værre end slet intet skilt.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Slår tilbage</span><p>Alt for få danskere får tjekket deres forsikringer. Gør noget nu.</p></div><div class="adline"><span class="adline-l">Virker</span><p>Otte ud af ti har allerede fået deres forsikringer tjekket. Mangler du?</p></div></div>
+<p>Samme virkelighed, to indramninger. Vælg den, hvor det ønskede er det normale.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">3 / 15</span><h3>Sæt kroner på det, du forærer væk</h3><a class="adref" href="#kap-6"><b>Kapitel 6</b><span>Hvornår bliver en bonus til en byrde?</span><span class="adchip">Valg og pris</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">−35 %</div><div class="stat-l">lavere pris var folk villige til at betale for den samme vare, når den blev vist som en gratis tillægsgave</div></div></div>
+<p>Alle lead magnets på Meta har det samme problem: ordet "gratis" sætter numerisk værdien til nul. Raghubirs forsøg viser, at gaven ikke bare mangler en pris — den bliver aktivt <strong>mindre</strong> værd i modtagerens øjne, fordi folk slutter, at ingen forærer noget værdifuldt væk.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Svag</span><p>Download vores gratis guide.</p></div><div class="adline"><span class="adline-l">Stærk</span><p>Få guiden til 1.200 kr. uden beregning.</p></div></div>
+<p>Det gælder også webinarer, prøvetimer, tjek og analyser. Skriv, hvad det ville have kostet.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">4 / 15</span><h3>Giv først — uden betingelser</h3><a class="adref" href="#kap-12"><b>Kapitel 12</b><span>Hvad er tiltrækningen ved ingen betingelser?</span><span class="adchip">Gengældelse</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">+45 %</div><div class="stat-l">flere deltog, da giveren havde givet <strong>først</strong>, i forhold til at give på betingelse af deltagelse</div></div></div>
+<p>Det her er hele forskellen mellem en lead magnet, der virker, og en, der ikke gør. Hotelkortet, der lovede en donation <em>hvis</em> gæsten deltog, gav <strong>nul</strong> forbedring. Kortet, der oplyste, at hotellet allerede <strong>havde</strong> doneret på gæstens vegne, gav 45 procent.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Byttehandel</span><p>Tilmeld dig nyhedsbrevet, og få adgang til vores værktøj.</p></div><div class="adline"><span class="adline-l">Gengældelse</span><p>Vi har lagt værktøjet frit frem. Brug det — og sig til, hvis du vil have mere.</p></div></div>
+<p>Alt med "hvis du... så får du..." er en økonomisk transaktion. Transaktioner skaber ingen forpligtelse, kun en pris.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">5 / 15</span><h3>Byg kampagnen som to skridt, ikke ét</h3><a class="adref" href="#kap-14"><b>Kapitel 14</b><span>Hvordan kan ét lille skridt få din indflydelse til at tage et kæmpespring?</span><span class="adchip">Konsistens</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">17 %</div><div class="stat-l">sagde ja til den store anmodning, når de blev spurgt direkte</div></div><div class="stat"><div class="stat-v">76 %</div><div class="stat-l">sagde ja, når de to uger forinden havde sagt ja til noget lille</div></div></div>
+<p>Det her er ikke en tekstregel, det er en kampagnestruktur. Det store spring i Freedman og Frasers forsøg kom ikke af et bedre argument, men af et lille ja to uger tidligere. På Meta hedder det en koldt-trafik-annonce, der beder om noget nærmest gratis, og en retargeting-annonce til dem, der sagde ja.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Skridt 1</span><p>Tag testen på to minutter og se, hvor du står.</p></div><div class="adline"><span class="adline-l">Skridt 2</span><p>Du tog testen. Her er de tre ting, dine svar peger på — book en gennemgang.</p></div></div>
+<p>Betingelsen fra forsøget er vigtig: det første ja skal føles <strong>frivilligt</strong>. Er første skridt stort nok til, at folk siger nej, har du ingen fod i døren — du har en lukket dør.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">6 / 15</span><h3>Legitimér det mindste skridt udtrykkeligt</h3><a class="adref" href="#kap-20"><b>Kapitel 20</b><span>Hvornår rækker det langt at bede om lidt?</span><span class="adchip">Anmodningens størrelse</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">50 %</div><div class="stat-l">donerede, når anmodningen tilføjede at selv et minimalt bidrag hjalp</div></div><div class="stat"><div class="stat-v">28,6 %</div><div class="stat-l">donerede uden den tilføjelse</div></div><div class="stat"><div class="stat-v">Ingen forskel</div><div class="stat-l">i det gennemsnitlige beløb pr. bidragyder mellem de to versioner</div></div></div>
+<p>Folk siger ikke nej, fordi de er ligeglade. De siger nej, fordi de tror, deres bidrag er for lille til at tælle. Fire ord fjernede undskyldningen og fordoblede antallet af givere — <strong>uden</strong> at beløbene faldt.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Uden</span><p>Book en tid, og lad os se på din markedsføring.</p></div><div class="adline"><span class="adline-l">Med</span><p>Book en tid. Selv et kort opkald på ti minutter kan give dig noget at gå videre med.</p></div></div>
+<p>Overfør det til din CTA. Det, der stopper folk, er sjældent tilbuddet — det er forestillingen om, hvor meget der kræves af dem.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">7 / 15</span><h3>Lad en anden sige det om dig</h3><a class="adref" href="#kap-22"><b>Kapitel 22</b><span>Hvordan viser vi, hvad vi kan, uden at blive stemplet som pralhalse?</span><span class="adchip">Autoritet</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">Højere vurdering</div><div class="stat-l">fik forfatteren på næsten alle dimensioner — særligt sympati — når agenten roste ham frem for ham selv</div></div></div>
+<p>Det er den forskningsmæssige begrundelse for, at UGC og kundevideoer slår brand-stemmen. Pfeffer-studiet viser mere end det: deltagerne vidste udmærket, at agenten fik <strong>betaling</strong> for at rose — og fratrak alligevel ikke det, de burde. Effekten var størst på netop den dimension, selvpromovering ødelægger: sympati.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Brand-stemme</span><p>Vi er markedets mest erfarne rådgivere.</p></div><div class="adline"><span class="adline-l">Tredjepart</span><p>"Jeg havde snakket med fire firmaer. De her var de eneste, der stillede spørgsmål, før de gav et bud." — kunde, Aarhus</p></div></div>
+<p>Gælder også de tørre kvalifikationer: lad speaken eller teksten sige "femten års erfaring", ikke personen i billedet.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">8 / 15</span><h3>Nævn svagheden — før nogen anden gør det</h3><a class="adref" href="#kap-26"><b>Kapitel 26</b><span>Hvad er den bedste måde at gøre en svaghed til en styrke på?</span><span class="adchip">Troværdighed</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">65 %</div><div class="stat-l">af kendelserne faldt til fordel for den part, hvis eget vidne selv fremlagde svagheden</div></div><div class="stat"><div class="stat-v">43 %</div><div class="stat-l">når modparten var den, der bragte den op først</div></div></div>
+<p>At argumentere imod din egen interesse skaber en opfattelse af, at du er ærlig — og <strong>det</strong> er, hvad der gør dine styrker troværdige bagefter. Folkevognskampagnen solgte en bil ved at kalde den grim. Progressive viser konkurrenternes lavere priser på sin egen forside.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Uden</span><p>Danmarks bedste projektværktøj — hurtigt, billigt og nemt.</p></div><div class="adline"><span class="adline-l">Med</span><p>Vi er ikke det billigste værktøj på markedet. Vi er det, folk stadig bruger efter seks måneder.</p></div></div>
+<p>To betingelser: svagheden skal være reelt lille, og den styrke, du følger op med, skal <strong>hænge sammen med</strong> svagheden. Svarer du på pris, skal du svare med omkostning — ikke med hastighed.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">9 / 15</span><h3>Brug kundens egne ord, ikke dine synonymer</h3><a class="adref" href="#kap-31"><b>Kapitel 31</b><span>Hvilke tips skal vi tage fra dem, der får dem?</span><span class="adchip">Sympati</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">+70 %</div><div class="stat-l">næsten så meget steg drikkepengene, da tjeneren gentog bestillingen ordret i stedet for at sige "okay"</div></div></div>
+<p>Det billigste hook, der findes, er en sætning, din kunde selv har sagt. Van Baarens tjenere ændrede ingenting ved servicen — de gentog kundens formulering ord for ord. Bogens kundeservice-eksempel viser bagsiden: medarbejderen sagde "ked af det" og "oprevet" til en kunde, der sagde "vred", og samtalen kørte af sporet på synonymerne alene.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Din formulering</span><p>Optimer din tidsanvendelse med automatiserede arbejdsgange.</p></div><div class="adline"><span class="adline-l">Deres formulering</span><p>"Jeg bruger hver fredag på at samle tal, ingen kigger på."</p></div></div>
+<p>Hent linjerne fra kommentarspor, salgsopkald og anmeldelser. Ikke fra din egen brandbog.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">10 / 15</span><h3>Skriv tilbuddet som et tab</h3><a class="adref" href="#kap-34"><b>Kapitel 34</b><span>Hvad kan du vinde ved tab?</span><span class="adchip">Knaphed</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">30 %</div><div class="stat-l">mere ville triste købere betale for samme vare</div></div><div class="stat"><div class="stat-v">33 %</div><div class="stat-l">mindre ville triste sælgere tage for den</div></div></div>
+<p>Tabsaversion er et af de bedst underbyggede fund i samfundsvidenskaben: folk er stærkere motiverede af at undgå tab end af at opnå gevinster. Bogen giver rewriten helt konkret.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Gevinst</span><p>Benyt lejligheden til at prøve den nye serie med 20 % rabat.</p></div><div class="adline"><span class="adline-l">Tab</span><p>Gå ikke glip af muligheden for at prøve den nye serie med 20 % rabat.</p></div></div>
+<p>Samme tilbud, samme rabat, samme deadline. Kun retningen er vendt. Og bemærk, at det kræver, at knapheden er ægte — ellers er det bare en løgn med god formulering.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">11 / 15</span><h3>Sæt altid et "fordi" ind</h3><a class="adref" href="#kap-35"><b>Kapitel 35</b><span>Hvilket ét ord styrker dine overtalelsesforsøg?</span><span class="adchip">Budskabets form</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">60 %</div><div class="stat-l">sagde ja uden nogen begrundelse</div></div><div class="stat"><div class="stat-v">94 %</div><div class="stat-l">sagde ja med en ægte begrundelse</div></div><div class="stat"><div class="stat-v">93 %</div><div class="stat-l">sagde ja med en fuldstændig indholdsløs begrundelse</div></div></div>
+<p>Langers kopimaskineforsøg er den billigste tekstredigering i bogen: ét ord. Men læg mærke til grænsen, som er lige så vigtig. Ved den <strong>store</strong> anmodning gav den tomme begrundelse <strong>ingen</strong> stigning overhovedet — kun den ægte fordoblede tilslutningen.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Uden</span><p>Book en gennemgang af din konto.</p></div><div class="adline"><span class="adline-l">Med</span><p>Book en gennemgang af din konto, fordi de fleste betaler for tre ting, de ikke bruger.</p></div></div>
+<p>Er dit tilbud gratis og uforpligtende, kan næsten enhver begrundelse bære. Koster det kunden noget, skal grunden holde.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">12 / 15</span><h3>Vis det dyre først</h3><a class="adref" href="#kap-39"><b>Kapitel 39</b><span>Hvad kan slagtræning lære os om overtalelse?</span><span class="adchip">Valg og pris</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">+500 %</div><div class="stat-l">steg salget af boblebadet, da det blev sammenlignet med prisen på en tilbygning</div></div><div class="stat"><div class="stat-v">15.000 $</div><div class="stat-l">prisen på boblebadet — mod et byggeri til mindst det dobbelte</div></div></div>
+<p>Perceptuel kontrast er det eneste værktøj i bogen, der ændrer, hvad din pris <strong>føles</strong> som, uden at du rører prisen. Byggemarkedet ændrede hverken produkt, pris eller garanti. De fandt bare en sammenligning, kunden allerede kendte prisen på.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Uden ramme</span><p>Forløbet koster 24.000 kr.</p></div><div class="adline"><span class="adline-l">Med ramme</span><p>En medarbejder til opgaven koster dig 38.000 kr. om måneden. Forløbet koster 24.000 kr. i alt.</p></div></div>
+<p>I en reklamefilm er det de første fem sekunder: vis omkostningen ved problemet, før du viser prisen på løsningen.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">13 / 15</span><h3>Lad annoncen og landingssiden ligne hinanden</h3><a class="adref" href="#kap-42"><b>Kapitel 42</b><span>Hvordan pakker du dit budskab, så det bliver ved og ved og ved?</span><span class="adchip">Budskabets form</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">40 %</div><div class="stat-l">af de seere, der kårede reklamen til årets bedste, var sikre på, at den var for <strong>konkurrenten</strong></div></div></div>
+<p>Energizers kanin var elsket, husket og prisbelønnet — og fyrre procent troede, den var Duracells. Efter kampagnen voksede <strong>Duracells</strong> markedsandel. Det er den dyreste form for spildt annoncekroner, der findes, og den ser ud som succes i alle rapporter undtagen salgstallet.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Reglen</span><p>Det billede, den sætning og den figur, der bar annoncen, skal møde brugeren igen øverst på landingssiden — uændret.</p></div></div>
+<p>Test ikke bare, om folk kan huske annoncen. Test, om de kan huske <strong>hvem den var fra</strong>. De to tal er ikke det samme.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">14 / 15</span><h3>Skriv til en, der er træt og distraheret</h3><a class="adref" href="#kap-45"><b>Kapitel 45</b><span>Hvad får folk til at tro på alt, hvad de læser?</span><span class="adchip">Tilstand og følelser</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">2 trin</div><div class="stat-l">accept af et udsagn sker automatisk; afvisning kræver en efterfølgende mental anstrengelse</div></div></div>
+<p>Gilberts fund er, at vi accepterer ethvert udsagn som sandt i det øjeblik, vi hører det, og først en brøkdel af et sekund senere afviser det — hvis vi har overskuddet. Meta bliver konsumeret præcis i den tilstand: træt, distraheret, med tommelfingeren i bevægelse.</p>
+<p>Det er ikke en invitation til at slippe af sted med tynde påstande. Det er en instruktion om <strong>form</strong>: din annonce får aldrig den anden bearbejdning, som et velbegrundet argument har brug for.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Reglen</span><p>Én påstand pr. annonce. Konkret. Uden forbehold i samme sætning.</p></div></div>
+<p>Det er også grunden til, at kapitel 37's råd betyder mere på Meta end noget andet sted: kort, letlæseligt, ingen jargon.</p></div></article>
+<article class="adcard"><header class="adhead"><span class="adidx">15 / 15</span><h3>Kør ikke samme kreativ i alle markeder</h3><a class="adref" href="#kap-48"><b>Kapitel 48</b><span>Hvordan når du frem til ja på ethvert sprog?</span><span class="adchip">Kultur og kanal</span></a></header><div class="adbody"><div class="stats"><div class="stat"><div class="stat-v">Sydkorea</div><div class="stat-l">den kollektivistiske version overbeviste mest</div></div><div class="stat"><div class="stat-v">USA</div><div class="stat-l">den individualistiske version overbeviste mest</div></div></div>
+<p>Han og Shavitts tyggegummiannonce er den reneste demonstration: samme produkt, samme fordel, to formuleringer. "Forkæl dig selv med en oplevelse af frisk ånde" mod "Del oplevelsen af frisk ånde". Vinderen skifter med markedet.</p>
+<div class="adlines"><div class="adline"><span class="adline-l">Individualistisk marked</span><p>Få styr på din egen økonomi.</p></div><div class="adline"><span class="adline-l">Kollektivistisk marked</span><p>Giv din familie tryghed om økonomien.</p></div></div>
+<p>Det er ikke et oversættelsesspørgsmål. Effekten var stærkest på produkter, folk deler med andre — så jo mere dit produkt bruges sammen med nogen, jo dyrere er det at køre én kreativ overalt.</p></div></article>
+</section>
 <h2 class="delhead" id="1-social-proof-flokkens-bevis">DEL 1 — Social proof: flokkens bevis</h2>
 <section class="chapter" id="kap-1" data-princip="Social proof" data-title="1. Hvordan kan det gøre dig mere overbevisende at besvære dit publikum?">
 <header class="ch-head"><span class="ch-num">1</span><div class="ch-title"><h3>Hvordan kan det gøre dig mere overbevisende at besvære dit publikum?</h3><p class="ch-meta"><span class="chip">Social proof</span><span class="src">Kapitel 1 · s. 9–14</span></p></div></header>
@@ -2289,6 +2415,7 @@ var q=document.getElementById('q'),
     dels=[].slice.call(document.querySelectorAll('.delhead')),
     navdels=[].slice.call(document.querySelectorAll('.navdel')),
     intro=document.getElementById('intro'),
+    metasec=document.getElementById('meta-ads'),
     empty=document.getElementById('empty'),
     navFor={},activeP='';
 [].slice.call(document.querySelectorAll('#side li[data-for]')).forEach(function(li){
@@ -2306,6 +2433,7 @@ function apply(){
   });
   var filtering=!!v||!!activeP;
   intro.classList.toggle('hide',filtering);
+  if(metasec)metasec.classList.toggle('hide',filtering);
   dels.forEach(function(h){
     var any=false,el=h.nextElementSibling;
     while(el&&!el.classList.contains('delhead')){

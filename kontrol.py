@@ -45,10 +45,19 @@ BOOK = norm(book)
 
 # --- kapitel for kapitel ---
 chapters = re.split(r"\n## (\d+)\. ", SRC)
-results = []
+
+# Den kuraterede META-sektion staar foer kapitel 1 og indeholder tal, der er
+# kopieret fra bogen. Den skal kontrolleres paa lige fod med kapitlerne.
+# @ads-linjer er vores egne annonceeksempler og kontrolleres ikke.
+blocks = []
+m = re.search(r"\n# META [^\n]*\n(.*?)(?=\n# DEL )", chapters[0], re.S)
+if m:
+    blocks.append(("META", "Meta ads (kurateret genvej)", m.group(1)))
 for i in range(1, len(chapters), 2):
-    num, body = chapters[i], chapters[i+1]
-    title = body.split("\n")[0]
+    blocks.append((chapters[i], chapters[i+1].split("\n")[0], chapters[i+1]))
+
+results = []
+for num, title, body in blocks:
     stats, quotes = [], []
     for line in body.split("\n"):
         line = line.strip()

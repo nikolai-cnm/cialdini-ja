@@ -42,6 +42,7 @@ sympati, autoritet) plus seks mekanismer, der falder uden for dem.
 | `kapitler.md` | **Kilden.** Al tekst redigeres her |
 | `build.py` | Bygger `index.html` ud fra `kapitler.md` |
 | `kontrol.py` | Kontroltest: holder alle tal og citater op mod bogen |
+| `artifact.html` | Genereret. Samme side uden html/head-wrapper |
 | `index.html` | Genereret. **Redigér den aldrig direkte** |
 | `kilde/` | Bogteksten som OCR, en fil pr. side. **Uden for git** |
 
@@ -100,6 +101,30 @@ Fri tekst, lister, citater.
 ```
 
 `@stat`-linjer, der står i træk, samles automatisk i et gitter af talkort.
+
+### Meta ads — kurateret genvej
+
+Forrest på siden ligger en sektion med de 15 kapitler, der oversætter sig
+direkte til en Meta-annonce: ét fra hver af de 14 dele plus den dyreste fejl.
+
+```markdown
+# META Meta ads — de 15, du kan lægge direkte ned over en annonce
+
+### AD 1 · Sig, hvad flertallet allerede gør — i første linje
+@stat +26 % :: flere deltog, da beskeden fortalte, hvad flertallet gjorde
+Fri tekst om hvorfor det virker på Meta.
+@ads Svag åbning :: ...
+@ads Stærk åbning :: ...
+```
+
+Kapitlerne bliver **ikke** flyttet eller kopieret. Hvert kort henter titel og
+princip fra selve kapitlet og linker til det, så de to aldrig kan komme ud af
+trit — der er kun én kilde til teksten.
+
+`@ads` er **vores egne** annonceeksempler og ser bevidst anderledes ud end
+`@citat`, som er bogens ord. De to må ikke kunne forveksles på siden.
+Kontroltesten kontrollerer `@stat`-tallene i sektionen på lige fod med
+kapitlernes, men rører ikke `@ads`.
 
 ### Ordrette citater
 
