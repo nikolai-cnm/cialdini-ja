@@ -20,6 +20,12 @@ Hvert kapitel i bogen er bygget op om ét eller flere konkrete forsøg. Nogle ka
 
 Nogle kapitler er korte og har én blok. Kapitel 5 har tre, fordi bogen dér stiller tre forskellige studier op mod hinanden — og pointen ligger først i sammenstillingen. Blokkene er derfor ikke pynt: de er dér, hvor bogen faktisk skifter bevisførelse.
 
+## Om ordrette citater
+
+Hvor bogen ændrer en konkret formulering — et skilt, en salgslinje, en reklametekst — står den **ordret**, i et citatkort med den engelske original under. Sådan kan du se præcis, hvad der blev sagt før og efter, og efterprøve oversættelsen.
+
+Hvor bogen kun refererer en ordlyd uden at citere den, står den **uden anførselstegn**, og der står en note om det. Håndklædeskiltene i kapitel 1 er det første eksempel: bogen gengiver dem aldrig ordret, og så gør siden det heller ikke.
+
 Hvert kapitel er mærket med det **princip**, det hviler på — Cialdinis seks universelle principper (social proof, gengældelse, autoritet, konsistens, knaphed, sympati) plus de mekanismer, der falder uden for dem.
 
 **Pilotversion:** Kapitel 1–5 er færdige. De resterende 45 følger samme skabelon.
@@ -45,8 +51,8 @@ Colleen Szot er en af de mest succesfulde forfattere i den amerikanske infomerci
 
 Programmet havde alt det sædvanlige: fyndord, et urealistisk begejstret studiepublikum, kendisanbefalinger. Det eneste, hun ændrede, var tre ord i den allermest slidte linje i genren.
 
-Fra: **"Operatørerne venter, ring nu."**
-Til: **"Hvis operatørerne er optaget, så ring venligst igen."**
+@citat Før :: Operatørerne venter, ring nu. :: Operators are waiting, please call now.
+@citat Efter :: Hvis operatørerne er optaget, så ring venligst igen. :: If operators are busy, please call again.
 
 På overfladen er det en tåbelig ændring. Budskabet fortæller nu potentielle kunder, at de risikerer at spilde tid på at ringe og ringe igen, før de får fat i nogen. Det er en forringelse af tilbuddet — og salget eksploderede.
 
@@ -62,7 +68,9 @@ Fænomenet er ikke nyt. Forskeren Stanley Milgram og hans kolleger lod en medhj�
 
 Forskellen ligger i det mentale billede, sætningen fremkalder.
 
-"Operatørerne venter" tegner et rum fuldt af kedsommelige telefonfolk, der filer negle og klipper kuponer ved tavse telefoner — et billede på lav efterspørgsel og dårligt salg. "Hvis operatørerne er optaget" tegner medarbejdere, der går fra opkald til opkald uden pause. Seeren drager selv slutningen: *hvis linjerne er optaget, sidder der andre som mig og ser det samme program lige nu — og de ringer.*
+"Operatørerne venter" tegner et rum fuldt af kedsommelige telefonfolk, der filer negle og klipper kuponer ved tavse telefoner — et billede på lav efterspørgsel og dårligt salg. "Hvis operatørerne er optaget" tegner medarbejdere, der går fra opkald til opkald uden pause. Seeren drager selv slutningen, og bogen skriver den ud:
+
+@citat Seerens slutning :: hvis telefonlinjerne er optaget, så er der andre som mig, der også ser den her infomercial, og som ringer. :: if the phone lines are busy, then other people like me who are also watching this infomercial are calling, too.
 
 Det er princippet om **social proof**: er vi usikre på, hvad vi skal gøre, aflæser vi andre mennesker og lader deres handlinger guide vores. Milgram-forsøget viser, at det virker, selv når "de andre" er fuldstændig anonyme fremmede, som vi hverken kender eller har nogen grund til at stole på.
 
@@ -88,6 +96,8 @@ Forfatterne fik en hotelchef med på at teste det. To skilte blev fordelt tilfæ
 - **Standardskiltet:** en klassisk miljøappel — hjælp med at skåne miljøet, vis din respekt for naturen ved at deltage.
 - **Social proof-skiltet:** oplysningen om, at flertallet af gæsterne på hotellet genbruger deres håndklæder mindst én gang i løbet af opholdet.
 
+@note Bogen gengiver aldrig de to skiltes ordlyd ordret — den refererer dem, som de er refereret her. Derfor står de uden anførselstegn. Den eneste ordlyd, kapitlet citerer direkte, er de to formuleringer nederst i konklusionen.
+
 Data kunne af indlysende grunde ikke indsamles af studentermedhjælpere, der sneg sig ind på badeværelser. Rengøringspersonalet meldte sig i stedet og noterede for hvert værelse på den første servicedag, om gæsten havde genbrugt mindst ét håndklæde.
 
 #### Statistik
@@ -99,15 +109,21 @@ Data kunne af indlysende grunde ikke indsamles af studentermedhjælpere, der sne
 
 Seksogtyve procents fremgang over branchestandarden, opnået udelukkende ved at ændre nogle få ord — og ved at bruge præcis den faktor, som folk hårdnakket hævder ikke påvirker dem.
 
-Men indpakningen afgør resten. Social proof leveret som en anklage virker ikke: *"Hey du dér: vær et får og følg flokken."* Leveret som en invitation gør: *"Slut dig til de mange andre, der er med til at skåne miljøet."* Samme information, modsat effekt.
+Men indpakningen afgør resten. Bogen stiller de to formuleringer op mod hinanden — og dem citerer den ordret:
+
+@citat Virker ikke :: Hey du dér: Vær et får og slut dig til flokken. Bææææææh! :: Hey you: Be a sheep and join the herd. Baaaaaaaah!
+@citat Virker :: Slut dig til utallige andre, der er med til at redde miljøet. :: Join countless others in helping to save the environment.
+
+Samme information, modsat effekt.
 
 #### Taktik
 
 1. **Skriv, hvad flertallet allerede gør — ikke kun hvorfor de burde.** Den ædle begrundelse er ikke forkert. Den er bare svagere end oplysningen om, at de fleste andre allerede er med.
-2. **Bed altid om udtalelser fra tilfredse kunder — og bed om dem systematisk.** Det er den billigste social proof, der findes, og den ligger typisk uindsamlet hen.
-3. **Vis udtalelserne dér, hvor tvivlen er størst.** Ikke som pynt på forsiden, men i den præsentation, hvor en ny kunde skal beroliges om, hvad du kan levere.
-4. **Byg situationer, hvor kunderne selv siger det til hinanden.** Inviter nuværende og potentielle kunder til samme frokost eller seminar, og læg bordplanen, så de blandes. Samtalen om fordelene opstår af sig selv — og den vejer tungere end noget, du kunne have sagt.
-5. **Ram tonen som invitation, ikke som formaning.** "Slut dig til de mange" frem for "alle andre gør det, hvorfor gør du ikke?".
+2. **Sæt tal på dine bedstsælgende produkter.** Bogens eget eksempel er McDonald's-skiltet, der oplyser **"Billions and billions served"** — milliarder og atter milliarder serveret. Populariteten er argumentet.
+3. **Bed altid om udtalelser fra tilfredse kunder — og bed om dem systematisk.** Det er den billigste social proof, der findes, og den ligger typisk uindsamlet hen.
+4. **Vis udtalelserne dér, hvor tvivlen er størst.** Ikke som pynt på forsiden, men i den præsentation, hvor en ny kunde skal beroliges om, hvad du kan levere.
+5. **Byg situationer, hvor kunderne selv siger det til hinanden.** Inviter nuværende og potentielle kunder til samme frokost eller seminar, og læg bordplanen, så de blandes. Samtalen om fordelene opstår af sig selv — og den vejer tungere end noget, du kunne have sagt.
+6. **Ram tonen som invitation, ikke som formaning.** "Slut dig til de mange" frem for "alle andre gør det, hvorfor gør du ikke?".
 
 ---
 
@@ -174,7 +190,7 @@ Mange år senere genbesøgte organisationen sin gamle ven. Kameraet viste denne 
 
 **"Back by popular neglect."** Tilbage på grund af folkelig forsømmelse.
 
-Samme fejl findes overalt. U.S. Forest Services maskot Woodsy Owl proklamerede i en langvarig annoncekampagne: *"I år vil amerikanerne producere mere affald og forurening end nogensinde før."* Nogle uger før præsidentvalget i 2004 udsendte organisationen Women's Voices. Women Vote omkring en million breve for at få flere enlige kvinder til at stemme. Budskabet: *"For 4 år siden undlod 22 millioner enlige kvinder at stemme."* Politiske grupper fordømmer stigende vælgerapati og ser deres kampagner slå tilbage. Hospitaler hænger plakater op i venteværelset om, hvor mange patienter der udebliver fra deres tid — og bliver frustrerede, når udeblivelserne stiger yderligere.
+Samme fejl findes overalt. U.S. Forest Services maskot Woodsy Owl proklamerede i en langvarig printannonce med titlen "Gross National Product": *"I år vil amerikanerne producere mere affald og forurening end nogensinde før."* Nogle uger før præsidentvalget i 2004 udsendte organisationen Women's Voices. Women Vote omkring en million breve for at få flere enlige kvinder til at stemme. Budskabet: *"For 4 år siden undlod 22 millioner enlige kvinder at stemme."* Politiske grupper fordømmer stigende vælgerapati og ser deres kampagner slå tilbage. Hospitaler hænger plakater op i venteværelset om, hvor mange patienter der udebliver fra deres tid — og bliver frustrerede, når udeblivelserne stiger yderligere.
 
 Og i Arizona møder gæster i Petrified Forest National Park et markant skilt: *"Din arv bliver hærget hver dag med tyveri af 14 tons forstenet træ om året, mest et lille stykke ad gangen."*
 

@@ -64,6 +64,21 @@ Fri tekst, lister, citater.
 
 `@stat`-linjer, der står i træk, samles automatisk i et gitter af talkort.
 
+### Ordrette citater
+
+```markdown
+@citat Før :: Operatørerne venter, ring nu. :: Operators are waiting, please call now.
+@citat Efter :: Hvis operatørerne er optaget, så ring venligst igen. :: If operators are busy, please call again.
+
+@note Bogen citerer ikke skiltets ordlyd — derfor står den uden anførselstegn.
+```
+
+**Regel:** ændrer bogen en konkret formulering, skal den stå ordret — som `@citat`,
+med den engelske original i tredje felt, så oversættelsen kan efterprøves.
+Refererer bogen kun en ordlyd uden at citere den, står den uden anførselstegn
+og med et `@note` om hvorfor. Bogens hotelskilte i kapitel 1 er det første
+tilfælde: de citeres aldrig ordret, og så gør siden det heller ikke.
+
 ## Siden
 
 Én selvstændig HTML-fil uden eksterne assets. Søgning, filtrering på princip,

@@ -172,6 +172,30 @@ details.stone summary:hover .stone-l{opacity:.72}
 }
 .stat-l{font-size:13.5px;line-height:1.48;color:var(--muted)}
 
+/* ---- ordrette citater ---- */
+.quotes{display:grid;gap:10px;margin:0 0 17px}
+.quotes.q2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.quote{
+  margin:0;padding:13px 16px 14px;border-radius:11px;
+  background:var(--panel2);border:1px solid var(--line2);
+  border-left:3px solid var(--historie)
+}
+.quote-l{
+  font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--historie);margin:0 0 6px
+}
+.quote-da{
+  margin:0;padding:0;border:0;background:none;
+  font-size:16.5px;line-height:1.5;font-weight:600
+}
+.quote-en{
+  margin:7px 0 0;font-size:13px;line-height:1.5;color:var(--muted);font-style:italic
+}
+p.note{
+  font-size:14.5px;line-height:1.55;color:var(--muted);
+  border-left:2px solid var(--line);padding-left:13px;margin:0 0 15px
+}
+
 p{margin:0 0 15px}
 ul,ol{margin:0 0 15px;padding-left:23px}
 li{margin:0 0 10px}
@@ -239,6 +263,9 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
 <p><strong>Konklusion</strong> — hvad tallene betyder, og hvilket psykologisk princip der er på spil.</p>
 <p><strong>Taktik</strong> — hvordan du bruger det. I salg, i ledelse, i marketing, i forhandling, i familien.</p>
 <p>Nogle kapitler er korte og har én blok. Kapitel 5 har tre, fordi bogen dér stiller tre forskellige studier op mod hinanden — og pointen ligger først i sammenstillingen. Blokkene er derfor ikke pynt: de er dér, hvor bogen faktisk skifter bevisførelse.</p>
+<h2>Om ordrette citater</h2>
+<p>Hvor bogen ændrer en konkret formulering — et skilt, en salgslinje, en reklametekst — står den <strong>ordret</strong>, i et citatkort med den engelske original under. Sådan kan du se præcis, hvad der blev sagt før og efter, og efterprøve oversættelsen.</p>
+<p>Hvor bogen kun refererer en ordlyd uden at citere den, står den <strong>uden anførselstegn</strong>, og der står en note om det. Håndklædeskiltene i kapitel 1 er det første eksempel: bogen gengiver dem aldrig ordret, og så gør siden det heller ikke.</p>
 <p>Hvert kapitel er mærket med det <strong>princip</strong>, det hviler på — Cialdinis seks universelle principper (social proof, gengældelse, autoritet, konsistens, knaphed, sympati) plus de mekanismer, der falder uden for dem.</p>
 <p><strong>Pilotversion:</strong> Kapitel 1–5 er færdige. De resterende 45 følger samme skabelon.</p>
 </div>
@@ -250,12 +277,13 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
 <header class="blok-head"><span class="blok-idx">Blok 1 af 2</span><h4>De tre ord, der slog en tyve år gammel salgsrekord</h4></header>
 <details class="stone s-historie" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Historie</span></summary><div class="stone-b"><p>Colleen Szot er en af de mest succesfulde forfattere i den amerikanske infomercial-branche. Hun har skrevet flere af de kendte reklameprogrammer for NordicTrac-træningsmaskinerne, og hun skrev et program, der slog en næsten tyve år gammel salgsrekord for en tv-shoppingkanal.</p>
 <p>Programmet havde alt det sædvanlige: fyndord, et urealistisk begejstret studiepublikum, kendisanbefalinger. Det eneste, hun ændrede, var tre ord i den allermest slidte linje i genren.</p>
-<p>Fra: <strong>"Operatørerne venter, ring nu."</strong> Til: <strong>"Hvis operatørerne er optaget, så ring venligst igen."</strong></p>
+<div class="quotes q2"><figure class="quote"><figcaption class="quote-l">Før</figcaption><blockquote class="quote-da">»Operatørerne venter, ring nu.«</blockquote><p class="quote-en">“Operators are waiting, please call now.”</p></figure><figure class="quote"><figcaption class="quote-l">Efter</figcaption><blockquote class="quote-da">»Hvis operatørerne er optaget, så ring venligst igen.«</blockquote><p class="quote-en">“If operators are busy, please call again.”</p></figure></div>
 <p>På overfladen er det en tåbelig ændring. Budskabet fortæller nu potentielle kunder, at de risikerer at spilde tid på at ringe og ringe igen, før de får fat i nogen. Det er en forringelse af tilbuddet — og salget eksploderede.</p>
 <p>Fænomenet er ikke nyt. Forskeren Stanley Milgram og hans kolleger lod en medhjælper stoppe op på et travlt fortov i New York og stirre op mod himlen i tres sekunder. De fleste forbipasserende gik uden om manden uden så meget som at kigge op. Så tilføjede forskerne fire mænd mere til gruppen af himmelkiggere.</p></div></details>
 <details class="stone s-statistik" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Statistik</span></summary><div class="stone-b"><div class="stats"><div class="stat"><div class="stat-v">3 ord</div><div class="stat-l">var hele forskellen — resten af programmet fulgte den gængse infomercial-skabelon</div></div><div class="stat"><div class="stat-v">~20 år</div><div class="stat-l">gammel salgsrekord for tv-shoppingkanalen blev slået af det ændrede program</div></div><div class="stat"><div class="stat-v">4x</div><div class="stat-l">mere end firedobling af antallet af forbipasserende, der stoppede op og kiggede med, da der stod fem himmelkiggere i stedet for én</div></div></div></div></details>
 <details class="stone s-konklusion" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Konklusion</span></summary><div class="stone-b"><p>Forskellen ligger i det mentale billede, sætningen fremkalder.</p>
-<p>"Operatørerne venter" tegner et rum fuldt af kedsommelige telefonfolk, der filer negle og klipper kuponer ved tavse telefoner — et billede på lav efterspørgsel og dårligt salg. "Hvis operatørerne er optaget" tegner medarbejdere, der går fra opkald til opkald uden pause. Seeren drager selv slutningen: <em>hvis linjerne er optaget, sidder der andre som mig og ser det samme program lige nu — og de ringer.</em></p>
+<p>"Operatørerne venter" tegner et rum fuldt af kedsommelige telefonfolk, der filer negle og klipper kuponer ved tavse telefoner — et billede på lav efterspørgsel og dårligt salg. "Hvis operatørerne er optaget" tegner medarbejdere, der går fra opkald til opkald uden pause. Seeren drager selv slutningen, og bogen skriver den ud:</p>
+<div class="quotes q1"><figure class="quote"><figcaption class="quote-l">Seerens slutning</figcaption><blockquote class="quote-da">»hvis telefonlinjerne er optaget, så er der andre som mig, der også ser den her infomercial, og som ringer.«</blockquote><p class="quote-en">“if the phone lines are busy, then other people like me who are also watching this infomercial are calling, too.”</p></figure></div>
 <p>Det er princippet om <strong>social proof</strong>: er vi usikre på, hvad vi skal gøre, aflæser vi andre mennesker og lader deres handlinger guide vores. Milgram-forsøget viser, at det virker, selv når "de andre" er fuldstændig anonyme fremmede, som vi hverken kender eller har nogen grund til at stole på.</p>
 <p>Den ubehagelige del: spørger man folk direkte, om andres adfærd påvirker deres egen, afviser de det blankt. Forfatterne har spurgt igen og igen. Svaret er nej. Forskningen siger noget andet — menneskers evne til at gennemskue, hvad der faktisk styrer deres egen adfærd, er overraskende ringe. Derfor kan man ikke designe overtalelse ved at spørge sig selv, hvad der ville virke på én selv.</p></div></details>
 <details class="stone s-taktik" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Taktik</span></summary><div class="stone-b"><ol>
@@ -274,12 +302,16 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
 <li><strong>Standardskiltet:</strong> en klassisk miljøappel — hjælp med at skåne miljøet, vis din respekt for naturen ved at deltage.</li>
 <li><strong>Social proof-skiltet:</strong> oplysningen om, at flertallet af gæsterne på hotellet genbruger deres håndklæder mindst én gang i løbet af opholdet.</li>
 </ul>
+<p class="note">Bogen gengiver aldrig de to skiltes ordlyd ordret — den refererer dem, som de er refereret her. Derfor står de uden anførselstegn. Den eneste ordlyd, kapitlet citerer direkte, er de to formuleringer nederst i konklusionen.</p>
 <p>Data kunne af indlysende grunde ikke indsamles af studentermedhjælpere, der sneg sig ind på badeværelser. Rengøringspersonalet meldte sig i stedet og noterede for hvert værelse på den første servicedag, om gæsten havde genbrugt mindst ét håndklæde.</p></div></details>
 <details class="stone s-statistik" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Statistik</span></summary><div class="stone-b"><div class="stats"><div class="stat"><div class="stat-v">+26 %</div><div class="stat-l">flere gæster genbrugte håndklædet med social proof-skiltet end med branchens standard-miljøskilt</div></div><div class="stat"><div class="stat-v">0</div><div class="stat-l">hoteller havde forfatterne set bruge den formulering, før de testede den</div></div></div></div></details>
 <details class="stone s-konklusion" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Konklusion</span></summary><div class="stone-b"><p>Seksogtyve procents fremgang over branchestandarden, opnået udelukkende ved at ændre nogle få ord — og ved at bruge præcis den faktor, som folk hårdnakket hævder ikke påvirker dem.</p>
-<p>Men indpakningen afgør resten. Social proof leveret som en anklage virker ikke: <em>"Hey du dér: vær et får og følg flokken."</em> Leveret som en invitation gør: <em>"Slut dig til de mange andre, der er med til at skåne miljøet."</em> Samme information, modsat effekt.</p></div></details>
+<p>Men indpakningen afgør resten. Bogen stiller de to formuleringer op mod hinanden — og dem citerer den ordret:</p>
+<div class="quotes q2"><figure class="quote"><figcaption class="quote-l">Virker ikke</figcaption><blockquote class="quote-da">»Hey du dér: Vær et får og slut dig til flokken. Bææææææh!«</blockquote><p class="quote-en">“Hey you: Be a sheep and join the herd. Baaaaaaaah!”</p></figure><figure class="quote"><figcaption class="quote-l">Virker</figcaption><blockquote class="quote-da">»Slut dig til utallige andre, der er med til at redde miljøet.«</blockquote><p class="quote-en">“Join countless others in helping to save the environment.”</p></figure></div>
+<p>Samme information, modsat effekt.</p></div></details>
 <details class="stone s-taktik" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Taktik</span></summary><div class="stone-b"><ol>
 <li><strong>Skriv, hvad flertallet allerede gør — ikke kun hvorfor de burde.</strong> Den ædle begrundelse er ikke forkert. Den er bare svagere end oplysningen om, at de fleste andre allerede er med.</li>
+<li><strong>Sæt tal på dine bedstsælgende produkter.</strong> Bogens eget eksempel er McDonald's-skiltet, der oplyser <strong>"Billions and billions served"</strong> — milliarder og atter milliarder serveret. Populariteten er argumentet.</li>
 <li><strong>Bed altid om udtalelser fra tilfredse kunder — og bed om dem systematisk.</strong> Det er den billigste social proof, der findes, og den ligger typisk uindsamlet hen.</li>
 <li><strong>Vis udtalelserne dér, hvor tvivlen er størst.</strong> Ikke som pynt på forsiden, men i den præsentation, hvor en ny kunde skal beroliges om, hvad du kan levere.</li>
 <li><strong>Byg situationer, hvor kunderne selv siger det til hinanden.</strong> Inviter nuværende og potentielle kunder til samme frokost eller seminar, og læg bordplanen, så de blandes. Samtalen om fordelene opstår af sig selv — og den vejer tungere end noget, du kunne have sagt.</li>
@@ -322,7 +354,7 @@ th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute
 <details class="stone s-historie" open><summary><span class="arrow" aria-hidden="true"></span><span class="stone-l">Historie</span></summary><div class="stone-b"><p>I begyndelsen af 1970'erne lavede organisationen Keep America Beautiful en reklamefilm, som mange stadig regner for den mest virkningsfulde public service-annonce nogensinde: en indianer, der ser den udbredte ødelæggelse af naturen og fælder en enkelt, tung tåre.</p>
 <p>Mange år senere genbesøgte organisationen sin gamle ven. Kameraet viste denne gang folk ved et busstoppested, der drak kaffe, læste avis og røg. Bussen kom, alle steg på, og kameraet klippede til det tomme stoppested — nu dækket af krus, aviser og cigaretskod. Kameraet panorerede langsomt hen til plakaten med indianeren, der stadig havde tåren i øjet. Skærmen blev sort, og teksten kom frem:</p>
 <p><strong>"Back by popular neglect."</strong> Tilbage på grund af folkelig forsømmelse.</p>
-<p>Samme fejl findes overalt. U.S. Forest Services maskot Woodsy Owl proklamerede i en langvarig annoncekampagne: <em>"I år vil amerikanerne producere mere affald og forurening end nogensinde før."</em> Nogle uger før præsidentvalget i 2004 udsendte organisationen Women's Voices. Women Vote omkring en million breve for at få flere enlige kvinder til at stemme. Budskabet: <em>"For 4 år siden undlod 22 millioner enlige kvinder at stemme."</em> Politiske grupper fordømmer stigende vælgerapati og ser deres kampagner slå tilbage. Hospitaler hænger plakater op i venteværelset om, hvor mange patienter der udebliver fra deres tid — og bliver frustrerede, når udeblivelserne stiger yderligere.</p>
+<p>Samme fejl findes overalt. U.S. Forest Services maskot Woodsy Owl proklamerede i en langvarig printannonce med titlen "Gross National Product": <em>"I år vil amerikanerne producere mere affald og forurening end nogensinde før."</em> Nogle uger før præsidentvalget i 2004 udsendte organisationen Women's Voices. Women Vote omkring en million breve for at få flere enlige kvinder til at stemme. Budskabet: <em>"For 4 år siden undlod 22 millioner enlige kvinder at stemme."</em> Politiske grupper fordømmer stigende vælgerapati og ser deres kampagner slå tilbage. Hospitaler hænger plakater op i venteværelset om, hvor mange patienter der udebliver fra deres tid — og bliver frustrerede, når udeblivelserne stiger yderligere.</p>
 <p>Og i Arizona møder gæster i Petrified Forest National Park et markant skilt: <em>"Din arv bliver hærget hver dag med tyveri af 14 tons forstenet træ om året, mest et lille stykke ad gangen."</em></p>
 <p>Forfatterne blev opmærksomme på problemet gennem en tidligere ph.d.-studerende. Han havde besøgt parken med sin forlovede — det mest ærlige menneske, han kendte, en der aldrig havde lånt en papirclips uden at levere den tilbage. De læste skiltet. Han var lamslået, da hun puffede ham i siden med albuen og hviskede: <em>"Vi må hellere sikre os vores nu."</em></p>
 <p>Forsøget: markerede stykker forstenet træ blev lagt ud langs stierne i parken, uden at gæsterne vidste det. Ved hver stis indgang stod ét af tre budskaber:</p>

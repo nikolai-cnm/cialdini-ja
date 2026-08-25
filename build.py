@@ -69,6 +69,35 @@ def render(lines, heading_base=1):
             out.append('<div class="stats">%s</div>' % "".join(cards))
             continue
 
+        # Ordrette citater — dansk gengivelse med den engelske original under
+        if s.startswith("@citat "):
+            cards = []
+            while i < n and lines[i].strip().startswith("@citat "):
+                bits = [b.strip() for b in
+                        lines[i].strip()[len("@citat "):].split("::")]
+                label = bits[0] if len(bits) > 0 else ""
+                da = bits[1] if len(bits) > 1 else ""
+                en = bits[2] if len(bits) > 2 else ""
+                cards.append(
+                    '<figure class="quote">%s<blockquote class="quote-da">'
+                    '»%s«</blockquote>%s</figure>' % (
+                        '<figcaption class="quote-l">%s</figcaption>' % inline(label)
+                        if label else "",
+                        inline(da),
+                        '<p class="quote-en">“%s”</p>' % inline(en)
+                        if en else ""))
+                i += 1
+            out.append('<div class="quotes q%d">%s</div>'
+                       % (min(len(cards), 2), "".join(cards)))
+            continue
+
+        # Redaktionel note — fx om bogen kun parafraserer en ordlyd
+        if s.startswith("@note "):
+            out.append('<p class="note">%s</p>'
+                       % inline(s[len("@note "):].strip()))
+            i += 1
+            continue
+
         # Tabel
         if s.startswith("|"):
             rows = []
@@ -450,6 +479,30 @@ details.stone summary:hover .stone-l{opacity:.72}
   color:var(--statistik);font-variant-numeric:tabular-nums;margin-bottom:5px
 }
 .stat-l{font-size:13.5px;line-height:1.48;color:var(--muted)}
+
+/* ---- ordrette citater ---- */
+.quotes{display:grid;gap:10px;margin:0 0 17px}
+.quotes.q2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.quote{
+  margin:0;padding:13px 16px 14px;border-radius:11px;
+  background:var(--panel2);border:1px solid var(--line2);
+  border-left:3px solid var(--historie)
+}
+.quote-l{
+  font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--historie);margin:0 0 6px
+}
+.quote-da{
+  margin:0;padding:0;border:0;background:none;
+  font-size:16.5px;line-height:1.5;font-weight:600
+}
+.quote-en{
+  margin:7px 0 0;font-size:13px;line-height:1.5;color:var(--muted);font-style:italic
+}
+p.note{
+  font-size:14.5px;line-height:1.55;color:var(--muted);
+  border-left:2px solid var(--line);padding-left:13px;margin:0 0 15px
+}
 
 p{margin:0 0 15px}
 ul,ol{margin:0 0 15px;padding-left:23px}
