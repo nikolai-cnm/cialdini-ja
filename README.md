@@ -6,7 +6,7 @@ Alle kapitler fra Noah J. Goldstein, Steve J. Martin og Robert B. Cialdinis
 *Yes! 50 Scientifically Proven Ways to Be Persuasive* (Free Press, 2008),
 skåret op i de forsøg, de faktisk bygger på.
 
-**Status: pilot.** Kapitel 1–5 er færdige. De øvrige 45 følger samme skabelon.
+**Status.** Kapitel 1–20 er færdige. De øvrige 30 følger samme skabelon.
 
 ## Opbygning
 
@@ -29,11 +29,36 @@ Antallet følger bogen — ikke en skabelon.
 |---|---|
 | `kapitler.md` | **Kilden.** Al tekst redigeres her |
 | `build.py` | Bygger `index.html` ud fra `kapitler.md` |
+| `kontrol.py` | Kontroltest: holder alle tal og citater op mod bogen |
 | `index.html` | Genereret. **Redigér den aldrig direkte** |
+| `kilde/` | Bogteksten som OCR, en fil pr. side. **Uden for git** |
 
 ```bash
+python3 kontrol.py   # skal give "0 med afvigelser" før build
 python3 build.py
 ```
+
+## Kontroltest
+
+`kontrol.py` trækker hvert `@stat`-tal og hver engelsk original ud af
+`kapitler.md` og slår dem op i bogens egen tekst. Exit 0 betyder, at alt blev
+fundet. Kør den før hvert build.
+
+Kilden ligger i `kilde/` og er holdt uden for git — bogteksten er
+ophavsretligt beskyttet. Genskab den sådan:
+
+```bash
+pdftoppm -r 300 -gray -png BOGEN.pdf img/p
+for f in img/p-*.png; do tesseract "$f" "${f%.png}" -l eng --psm 6; done
+mkdir kilde && cp img/*.txt kilde/
+```
+
+**OCR kan selv tage fejl.** Slår testen ud på et tal, så se på sidebilledet,
+før du retter teksten. Bogens gamle 5-tal blev fx læst som 9 i to uafhængige
+OCR-gennemløb — valgmarginen i kapitel 16 er 537 stemmer, ikke 937.
+
+Tal, der er vores egen udregning og ikke står i bogen, markeres med ordet
+"udregning" i `@stat`-labelen og springes over af testen.
 
 ## Markdown-dialekt
 
