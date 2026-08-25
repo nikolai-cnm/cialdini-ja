@@ -6,7 +6,7 @@ Alle kapitler fra Noah J. Goldstein, Steve J. Martin og Robert B. Cialdinis
 *Yes! 50 Scientifically Proven Ways to Be Persuasive* (Free Press, 2008),
 skåret op i de forsøg, de faktisk bygger på.
 
-**Status.** Kapitel 1–20 er færdige. De øvrige 30 følger samme skabelon.
+**Status: komplet.** Alle 50 kapitler, 94 blokke, 221 talkort og 62 ordrette citater.
 
 ## Opbygning
 
@@ -20,8 +20,20 @@ selvstændigt fund i kapitlet. Hver blok har fire trin:
 | **Konklusion** | Hvad tallene betyder, og hvilket princip der er på spil |
 | **Taktik** | Hvordan det bruges i salg, ledelse, marketing, forhandling og privatliv |
 
-Kapitel 1, 3 og 4 har to blokke. Kapitel 5 har tre. Kapitel 2 har én.
-Antallet følger bogen — ikke en skabelon.
+Antallet af blokke følger bogen, ikke en skabelon. **Reglen:** der er en ny blok,
+hvor bogen drager en ny konklusion og giver et nyt råd. 15 kapitler har én blok,
+26 har to, 9 har tre.
+
+Kapitel 5 har tre, fordi bogen dér stiller tre studier op mod hinanden og pointen
+først ligger i sammenstillingen. Kapitel 11 har én, selv om pastil-forsøget har tre
+betingelser, fordi bogen drager én samlet konklusion af dem.
+
+De 50 kapitler er grupperet i 14 dele og mærket med 12 principper, der kan filtreres
+på i sidebaren: Cialdinis seks (social proof, gengældelse, konsistens, knaphed,
+sympati, autoritet) plus seks mekanismer, der falder uden for dem.
+
+**33 steder gengiver bogen ingen tal** — kun retningen af et resultat. Der står en
+`@note` hvert sted i stedet for tal hentet andetsteds fra.
 
 ## Filer
 

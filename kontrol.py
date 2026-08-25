@@ -29,7 +29,10 @@ OCR_DIR = Path(sys.argv[1] if len(sys.argv) > 1 else "kilde")
 book = " ".join(f.read_text(encoding="utf-8", errors="ignore") for f in sorted(OCR_DIR.glob("*.txt")))
 
 def norm(s):
-    s = re.sub(r"([a-zA-Z])[-\u2010]\s*\n\s*([a-zA-Z])", r"\1\2", s)
+    # Saml ord, bogen har delt over to linjer. Scanningen efterlader ofte et
+    # loesrevet tegn fra margenen mellem bindestregen og linjeskiftet.
+    s = re.sub(r"([a-zA-Z])[-\u2010][ \t]*(?:\S{1,2}[ \t]*)?\n\s*([a-zA-Z])",
+               r"\1\2", s)
     s = unicodedata.normalize("NFKD", s)
     s = s.replace("’","'").replace("‘","'").replace("“",'"').replace("”",'"')
     s = s.replace("—"," ").replace("–"," ").replace("-"," ")
@@ -78,6 +81,13 @@ for num, title, stats, quotes in results:
         # prøv hele citatet, ellers længste sammenhængende stykke på 6 ord
         if ne in BOOK:
             continue
+        # OCR efterlader lososrevne enkelttegn i margenen midt i saetninger.
+        # Tillad derfor et kort stoej-token mellem to ord.
+        toks = ne.split()
+        if toks:
+            rx = r"(?:\s+\S{1,2})?\s+".join(re.escape(w) for w in toks)
+            if re.search(rx, BOOK):
+                continue
         words = ne.split()
         chunk = " ".join(words[:7]) if len(words) >= 7 else ne
         if chunk in BOOK:
